@@ -1,0 +1,29 @@
+[project]
+name = "distilling-step-by-step"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10.6"
+dependencies = [
+    "datasets>=4.1.1",
+    "protobuf==3.20.*",
+    "sentencepiece>=0.2.1",
+    "tensorboardx>=2.6.4",
+    "torch==1.12.1+cu113",
+    "torchaudio==0.12.1+cu113",
+    "torchvision==0.13.1+cu113",
+    "transformers",
+]
+
+
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
+torchaudio = { index = "pytorch" }
+torchvision = { index = "pytorch" }
+transformers = { git = "https://github.com/huggingface/transformers", rev = "v4.24.0" }
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu113"
+explicit = true
